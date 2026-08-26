@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consultoría de Procesos - Proyecto Académico</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-only">
+  <!-- Navbar -->
+  <header class="site-header fixed-top">
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#inicio">
+          <img src="assets/logo blanco.png" alt="Consultora" class="brand-logo-img">
+          <span class="visually-hidden">Consultora</span>
+        </a>
+        <div class="navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#entregables">Entregable</a></li>
+            <li class="nav-item"><a class="nav-link" href="#propuesta">Propuestas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#equipo">Nosotros</a></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideNav" aria-controls="sideNav" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+      </div>
+    </nav>
+
+      <!-- Offcanvas vertical navigation (opened with hamburger) -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="sideNav" aria-labelledby="sideNavLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="sideNavLabel">Navegación</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+          <nav class="nav flex-column">
+            <a class="nav-link py-2" href="#inicio">Inicio</a>
+            <a class="nav-link py-2" href="#empresa">Empresa</a>
+            <a class="nav-link py-2" href="#metodologia">Metodología</a>
+            <a class="nav-link py-2" href="#diagnostico">Diagnóstico</a>
+            <a class="nav-link py-2" href="#procesos">Procesos</a>
+            <a class="nav-link py-2" href="#entregables">Entregables</a>
+            <a class="nav-link py-2" href="#propuesta">Propuesta</a>
+            <a class="nav-link py-2" href="#resultados">Resultados</a>
+            <a class="nav-link py-2" href="#bitacora">Bitácora</a>
+            <a class="nav-link py-2" href="#evidencias">Evidencias</a>
+            <a class="nav-link py-2" href="#equipo">Equipo</a>
+          </nav>
+        </div>
+      </div>
+  </header>
+
+  <!-- Hero / Inicio -->
+  <main class="mt-5 pt-5">
+    <section id="inicio" class="hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="hero-title">Consultoría en Transformación y Optimización de Procesos</h1>
+            <p class="lead text-muted">Mejoramos procesos, alineamos tecnología y reducimos ineficiencias mediante análisis riguroso y propuestas ejecutables.</p>
+            <p class="small text-muted">Empresa analizada: <strong>Ternium</strong></p>
+            <div class="mt-4">
+              <a href="#entregables" class="btn btn-primary me-2">Conoce el proyecto</a>
+              <a href="#bitacora" class="btn btn-outline-primary">Ver avances</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="hero-visual">
+              <img src="assets/Inicio.png" alt="Logo de Modus Consulting" class="img-fluid hero-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre la consultoría (unificada dentro de Equipo) -->
+    <!-- Eliminado: contenido migrado a la sección Equipo -->
+
+    <!-- Empresa / Socio Formador -->
+    <section id="empresa" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Empresa / Socio Formador</h2>
+        <div class="row">
+          <div class="col-md-8">
+            <p class="text-muted">Nombre: <strong>[Agregar nombre de la empresa aquí]</strong></p>
+            <p class="text-muted">Industria: <strong>[Agregar industria]</strong></p>
+            <p class="text-muted">Ubicación: <strong>[Agregar ubicación]</strong></p>
+            <p class="text-muted">Descripción: [Agregar descripción aquí]</p>
+            <p class="text-muted">Servicios / Productos: [Agregar lista aquí]</p>
+            <p class="text-muted">Situación actual: [Agregar información]</p>
+          </div>
+          <div class="col-md-4">
+            <div class="card key-data-card">
+              <div class="card-body">
+                <h5>Datos clave</h5>
+                <ul class="list-unstyled small text-muted">
+                  <li><strong>Empleados:</strong> [Agregar]</li>
+                  <li><strong>Ingresos:</strong> [Agregar]</li>
+                  <li><strong>Sistemas:</strong> [Agregar]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case for Action -->
+    <section id="diagnostico" class="section bg-alt py-5">
+      <div class="container">
+        <h2 class="section-title">Case for Action</h2>
+        <p class="text-muted">[Agregar resumen de por qué es necesario realizar el proyecto]</p>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h6>Situación actual</h6>
+                <p class="small text-muted">[Agregar]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h6>Ineficiencias</h6>
+                <p class="small text-muted">[Agregar]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h6>Impacto</h6>
+                <p class="small text-muted">[Agregar]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metodología -->
+    <section id="metodologia" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Metodología</h2>
+        <p class="text-muted">[Agregar descripción general de la metodología]</p>
+        <div class="process-steps mt-4">
+          <ol class="timeline">
+            <li><strong>Entendimiento</strong><p class="small text-muted">[Agregar]</p></li>
+            <li><strong>Levantamiento</strong><p class="small text-muted">[Agregar]</p></li>
+            <li><strong>Análisis</strong><p class="small text-muted">[Agregar]</p></li>
+            <li><strong>Diagnóstico</strong><p class="small text-muted">[Agregar]</p></li>
+            <li><strong>Priorizar</strong><p class="small text-muted">[Agregar]</p></li>
+            <li><strong>Propuesta</strong><p class="small text-muted">[Agregar]</p></li>
+            <li><strong>Implementación</strong><p class="small text-muted">[Agregar]</p></li>
+            <li><strong>Resultados</strong><p class="small text-muted">[Agregar]</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arquitectura empresarial -->
+    <section id="arquitectura" class="section bg-light py-5">
+      <div class="container">
+        <h2 class="section-title">Arquitectura empresarial</h2>
+        <p class="text-muted">Subsecciones: negocio, procesos, personas, tecnología, datos. [Agregar contenido]</p>
+        <p class="small text-muted">Marcos sugeridos: TOGAF, COBIT, BPMN.</p>
+      </div>
+    </section>
+
+    <!-- Procesos -->
+    <section id="procesos" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Procesos</h2>
+        <div class="row" id="process-list">
+          <!-- Ejemplo de tarjeta de proceso -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5>Proceso: [Nombre del proceso]</h5>
+                <p class="small text-muted">Descripción breve</p>
+                <p class="small text-muted"><strong>Responsable:</strong> [Agregar]</p>
+                <a href="#" class="btn btn-sm btn-outline-primary view-process" data-bs-toggle="modal" data-process="1">Ver proceso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal para ver proceso -->
+        <div class="modal fade" id="processModal" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Detalle del proceso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <p>[Aquí se mostrará la información detallada del proceso]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AS-IS -->
+    <section id="as-is" class="section bg-alt py-5">
+      <div class="container">
+        <h2 class="section-title">AS-IS</h2>
+        <p class="text-muted">[Agregar diagrama y descripción del estado actual]</p>
+      </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section id="painpoints" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Pain Points</h2>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h6>Retrabajo excesivo</h6>
+                <p class="small text-muted">Impacto: Alto. Evidencia: [Agregar]</p>
+                <span class="badge bg-danger">Alta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Análisis causa raíz -->
+    <section id="causa-raiz" class="section bg-light py-5">
+      <div class="container">
+        <h2 class="section-title">Análisis causa raíz</h2>
+        <p class="text-muted">Herramientas: 5 Whys, Ishikawa, Pareto. [Agregar resultados]</p>
+      </div>
+    </section>
+
+    <!-- Métricas y KPIs -->
+    <section id="kpis" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Métricas y KPIs</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="kpi-card card text-center p-3">
+              <div class="kpi-value" data-target="72">0</div>
+              <div class="kpi-label small text-muted">Tiempo promedio (hrs)</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="kpi-card card text-center p-3">
+              <div class="kpi-value" data-target="15">0</div>
+              <div class="kpi-label small text-muted">Errores / mes</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="kpi-card card text-center p-3">
+              <div class="kpi-value" data-target="40">0</div>
+              <div class="kpi-label small text-muted">% Automatización</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Entregables -->
+    <section id="entregables" class="section bg-alt py-5">
+      <div class="container">
+        <h2 class="section-title">Entregables</h2>
+        <div class="mb-3">
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="all">Todos</button>
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="diagnostico">Diagnóstico</button>
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="analisis">Análisis</button>
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="propuesta">Propuesta</button>
+        </div>
+        <div class="row" id="deliverables-list">
+          <div class="col-md-4 deliverable-item" data-stage="diagnostico">
+            <div class="card">
+              <div class="card-body">
+                <h5>Fase 1 – Diagnóstico</h5>
+                <p class="small text-muted">Contexto de la empresa, Case for Action.</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-sm btn-primary">Ver</a>
+                  <a href="documents/diagnostico_placeholder.pdf" class="btn btn-sm btn-outline-primary" download>Descargar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Propuesta / TO-BE -->
+    <section id="propuesta" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Propuesta de mejora / TO-BE</h2>
+        <p class="text-muted">[Descripción de la propuesta]</p>
+        <div class="row">
+          <div class="col-md-6">
+            <h6>AS-IS</h6>
+            <ul class="small text-muted">
+              <li>Actividades manuales</li>
+              <li>Retrabajos</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h6>TO-BE</h6>
+            <ul class="small text-muted">
+              <li>Automatización</li>
+              <li>Estandarización</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="section bg-light py-5">
+      <div class="container">
+        <h2 class="section-title">Roadmap</h2>
+        <p class="text-muted">Corto, mediano y largo plazo. [Agregar acciones y responsables]</p>
+      </div>
+    </section>
+
+    <!-- Resultados / Impacto esperado -->
+    <section id="resultados" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Resultados / Impacto esperado</h2>
+        <p class="text-muted">[Indicadores de ejemplo, reemplazar por datos reales]</p>
+      </div>
+    </section>
+
+    <!-- Bitácora -->
+    <section id="bitacora" class="section bg-alt py-5">
+      <div class="container">
+        <h2 class="section-title">Bitácora del proyecto</h2>
+        <div class="timeline-entries">
+          <div class="timeline-entry">
+            <strong>Semana 1:</strong> [Agregar actividades]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evidencias / Galería -->
+    <section id="evidencias" class="section py-5">
+      <div class="container">
+        <h2 class="section-title">Evidencias</h2>
+        <div class="row gallery">
+          <div class="col-md-3 mb-3">
+            <img src="images/example1.jpg" alt="Evidencia" class="img-fluid gallery-item" data-full="images/example1.jpg" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Modal -->
+      <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="" id="galleryImage" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="section bg-light py-5">
+      <div class="container">
+        <h2 class="section-title">Equipo</h2>
+        <p class="text-muted">Somos un equipo multidisciplinario especializado en análisis, diagnóstico, optimización y transformación de procesos.</p>
+        <div class="row mt-4">
+          <div class="col-md-3">
+            <div class="card feature-card">
+              <div class="card-body text-center">
+                <i class="fa fa-search fa-2x text-primary mb-3"></i>
+                <h5>Análisis</h5>
+                <p class="small text-muted">[Agregar descripción]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card feature-card">
+              <div class="card-body text-center">
+                <i class="fa fa-file-chart-line fa-2x text-primary mb-3"></i>
+                <h5>Diagnóstico</h5>
+                <p class="small text-muted">[Agregar descripción]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card feature-card">
+              <div class="card-body text-center">
+                <i class="fa fa-cogs fa-2x text-primary mb-3"></i>
+                <h5>Optimización</h5>
+                <p class="small text-muted">[Agregar descripción]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card feature-card">
+              <div class="card-body text-center">
+                <i class="fa fa-lightbulb fa-2x text-primary mb-3"></i>
+                <h5>Transformación</h5>
+                <p class="small text-muted">[Agregar descripción]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card team-card">
+              <img src="images/team1.jpg" class="card-img-top" alt="" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h5 class="card-title">[Nombre integrante]</h5>
+                <p class="small text-muted">Carrera · Rol</p>
+                <p class="small text-muted">Responsabilidades: [Agregar]</p>
+                <a href="#" class="text-primary small"><i class="fa fa-linkedin"></i> LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer py-4 bg-dark text-white">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <strong>Consultora</strong> · Proyecto académico · [Universidad] · 2026
+      </div>
+      <div class="small text-muted">Integrantes: [Agregar nombres] · Este es un proyecto académico</div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" title="Volver arriba"><i class="fa fa-chevron-up"></i></button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
