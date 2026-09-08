@@ -8,9 +8,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="premium.css">
 </head>
-<body class="home-only">
+<body>
   <!-- Navbar -->
   <header class="site-header fixed-top">
     <nav class="navbar">
@@ -22,44 +26,42 @@
         <div class="navbar-collapse" id="mainNav">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#entregables">Entregable</a></li>
-            <li class="nav-item"><a class="nav-link" href="#propuesta">Propuestas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#equipo">Nosotros</a></li>
+            <li class="nav-item project-dropdown">
+              <a class="nav-link active" href="#proyecto">Proyecto</a>
+              <ul class="project-submenu" aria-label="Subsecciones de Proyecto">
+                <li><a href="#reto">Reto</a></li>
+                <li><a href="#alcance">Alcance</a></li>
+                <li><a href="#diagnostico">Diagnóstico</a></li>
+                <li><a href="#hallazgos">Hallazgos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#entregables">Entregables</a>
+            </li>
+            <li class="nav-item info-dropdown">
+              <a class="nav-link" href="#propuesta">Propuesta</a>
+              <ul class="info-submenu" aria-label="Subsecciones de Propuesta">
+                <li><a href="#oportunidades">Oportunidades</a></li>
+                <li><a href="#solucion">Solución</a></li>
+                <li><a href="#rastreo">RASTREO</a></li>
+                <li><a href="#torre">TORRE</a></li>
+                <li><a href="#tobe">TO-BE</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#equipo">Nosotros</a>
+            </li>
           </ul>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideNav" aria-controls="sideNav" aria-label="Abrir menú">
-          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-        </button>
       </div>
     </nav>
-
-      <!-- Offcanvas vertical navigation (opened with hamburger) -->
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="sideNav" aria-labelledby="sideNavLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="sideNavLabel">Navegación</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-          <nav class="nav flex-column">
-            <a class="nav-link py-2" href="#inicio">Inicio</a>
-            <a class="nav-link py-2" href="#empresa">Empresa</a>
-            <a class="nav-link py-2" href="#metodologia">Metodología</a>
-            <a class="nav-link py-2" href="#diagnostico">Diagnóstico</a>
-            <a class="nav-link py-2" href="#procesos">Procesos</a>
-            <a class="nav-link py-2" href="#entregables">Entregables</a>
-            <a class="nav-link py-2" href="#propuesta">Propuesta</a>
-            <a class="nav-link py-2" href="#resultados">Resultados</a>
-            <a class="nav-link py-2" href="#bitacora">Bitácora</a>
-            <a class="nav-link py-2" href="#evidencias">Evidencias</a>
-            <a class="nav-link py-2" href="#equipo">Equipo</a>
-          </nav>
-        </div>
-      </div>
   </header>
 
   <!-- Hero / Inicio -->
-  <main class="mt-5 pt-5">
-    <section id="inicio" class="hero-section py-5">
+  <main>
+    <section id="inicio" class="hero-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -67,8 +69,7 @@
             <p class="lead text-muted">Mejoramos procesos, alineamos tecnología y reducimos ineficiencias mediante análisis riguroso y propuestas ejecutables.</p>
             <p class="small text-muted">Empresa analizada: <strong>Ternium</strong></p>
             <div class="mt-4">
-              <a href="#entregables" class="btn btn-primary me-2">Conoce el proyecto</a>
-              <a href="#bitacora" class="btn btn-outline-primary">Ver avances</a>
+              <a href="#proyecto" class="btn btn-primary">Conoce el proyecto</a>
             </div>
           </div>
           <div class="col-lg-6 text-center">
@@ -80,193 +81,453 @@
       </div>
     </section>
 
-    <!-- Sobre la consultoría (unificada dentro de Equipo) -->
-    <!-- Eliminado: contenido migrado a la sección Equipo -->
-
-    <!-- Empresa / Socio Formador -->
-    <section id="empresa" class="section py-5">
+    <section id="proyecto" class="project-page">
       <div class="container">
-        <h2 class="section-title">Empresa / Socio Formador</h2>
-        <div class="row">
-          <div class="col-md-8">
-            <p class="text-muted">Nombre: <strong>[Agregar nombre de la empresa aquí]</strong></p>
-            <p class="text-muted">Industria: <strong>[Agregar industria]</strong></p>
-            <p class="text-muted">Ubicación: <strong>[Agregar ubicación]</strong></p>
-            <p class="text-muted">Descripción: [Agregar descripción aquí]</p>
-            <p class="text-muted">Servicios / Productos: [Agregar lista aquí]</p>
-            <p class="text-muted">Situación actual: [Agregar información]</p>
+        <div class="project-hero row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="eyebrow">PROYECTO ACADÉMICO · TERNIUM</div>
+            <h1 class="project-title">Optimización de la Central de Ferrocarril</h1>
+            <p class="project-subtitle">Diagnóstico y diseño de mejoras para reducir la exposición a demoras ferroviarias mediante mejor información, coordinación operativa y aprovechamiento de la capacidad instalada.</p>
+            <div class="project-chips" aria-label="Temas del proyecto">
+              <span>Planeación</span>
+              <span>Programación</span>
+              <span>Ejecución</span>
+              <span>Monitoreo</span>
+            </div>
+            <div class="project-actions">
+              <a href="#diagnostico" class="btn btn-primary">Explorar diagnóstico</a>
+              <a href="#entregables" class="btn btn-outline-primary">Consultar entregables</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="project-visual" aria-label="Diagrama del flujo ferroviario">
+              <div class="visual-node node-plan">Planeación</div>
+              <div class="visual-arrow arrow-1"></div>
+              <div class="visual-node node-schedule">Tránsito</div>
+              <div class="visual-arrow arrow-2"></div>
+              <div class="visual-node node-arrival accent">Arribo / Situado</div>
+              <div class="visual-arrow arrow-3"></div>
+              <div class="visual-node node-plant">Operación en planta</div>
+              <div class="visual-arrow arrow-4"></div>
+              <div class="visual-node node-release">Liberación</div>
+            </div>
+          </div>
+        </div>
+
+        <article class="project-brief" aria-label="Ficha del proyecto">
+          <div class="project-brief-heading">
+            <span class="eyebrow">FICHA DEL PROYECTO</span>
+            <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+          </div>
+          <div class="project-brief-grid">
+            <div><span>Socio formador</span><strong>Ternium</strong></div>
+            <div><span>Área analizada</span><strong>Central de Ferrocarril</strong></div>
+            <div><span>Proceso</span><strong>Abastecimiento ferroviario de materias primas</strong></div>
+            <div><span>Alcance</span><strong>Planeación → Liberación</strong></div>
+            <div><span>Restricción crítica</span><strong>Ventana contractual de 24 h</strong></div>
+          </div>
+        </article>
+
+        <nav class="project-subnav" aria-label="Navegación de proyecto">
+          <a href="#reto">Reto</a>
+          <a href="#alcance">Alcance</a>
+          <a href="#diagnostico">Diagnóstico</a>
+          <a href="#hallazgos">Hallazgos</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="reto" class="section project-section">
+      <div class="container">
+        <div class="eyebrow">EL RETO</div>
+        <h2 class="section-title project-heading">Liberar a tiempo depende de decisiones que empiezan antes del ingreso a planta</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <p class="project-copy">La Central de Ferrocarril coordina una operación en la que una unidad debe ser atendida y liberada dentro de una ventana contractual de 24 horas. De acuerdo con las sesiones de trabajo con Ternium, el reloj de demora inicia cuando la ferrocarrilera registra el evento "situado en industria", no necesariamente cuando la góndola cruza físicamente el acceso a planta.</p>
+          </div>
+          <div class="col-lg-6">
+            <p class="project-copy">En el flujo chatarra utilizado como referencia para el análisis interno, el tramo modelado entre ingreso y liberación suma 36.5 horas. De ese tiempo, 15 horas corresponden a espera y 21.5 horas a procesamiento. Esto indica que existe una oportunidad importante de reducir permanencia sin asumir, como primera alternativa, una ampliación de infraestructura.</p>
+          </div>
+        </div>
+
+        <div class="project-kpis row g-3">
+          <div class="col-md-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-value">24 h</div>
+              <div class="metric-label">Ventana contractual</div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-value">36.5 h*</div>
+              <div class="metric-label">Ingreso → liberación</div>
+              <small>Modelo del flujo analizado</small>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-value">15 h*</div>
+              <div class="metric-label">Tiempo de espera</div>
+              <small>41 % de la permanencia modelada</small>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="metric-card">
+              <div class="metric-value">21.5 h*</div>
+              <div class="metric-label">Tiempo de procesamiento</div>
+              <small>Dentro del flujo modelado</small>
+            </article>
+          </div>
+        </div>
+
+        <p class="project-note">*Valores derivados del modelo AS-IS y sujetos a validación mediante medición operativa por evento.</p>
+
+        <div class="contract-timeline timeline-comparison" aria-label="Comparación entre reloj contractual y permanencia interna">
+          <article class="timeline-panel timeline-panel-contract">
+            <div class="timeline-panel-heading">
+              <div>
+                <span class="timeline-kicker">A · RELOJ CONTRACTUAL</span>
+                <strong>Situado en industria</strong>
+                <span class="timeline-start-note timeline-start-note--left">Inicio del reloj · 0 h</span>
+              </div>
+              <span class="timeline-end-note">Liberación dentro de la ventana</span>
+            </div>
+            <p class="timeline-description">Mide desde “situado en industria” hasta la liberación.</p>
+            <div class="contract-scale" aria-label="Escala del reloj contractual de 0 a 24 horas">
+              <div class="contract-scale-line">
+                <span class="contract-scale-zero">0 h<small>Inicio del reloj</small></span>
+                <span class="contract-scale-mid">12 h</span>
+                <span class="contract-scale-limit">24 h<small>LÍMITE CONTRACTUAL</small></span>
+                <span class="contract-release">Liberación esperada</span>
+              </div>
+              <div class="contract-risk-zone">Riesgo de demora</div>
+            </div>
+          </article>
+
+          <article class="timeline-panel timeline-panel-internal">
+            <div class="timeline-panel-heading">
+              <div>
+                <span class="timeline-kicker">B · PERMANENCIA INTERNA</span>
+                <strong>Ingreso RFID a planta</strong>
+              </div>
+              <span class="timeline-start-note">Resultado modelado · 36.5 h</span>
+            </div>
+            <p class="timeline-description">Mide desde el ingreso RFID hasta la liberación.</p>
+            <div class="independent-timeline independent-timeline-internal">
+              <span class="timeline-endpoint timeline-endpoint-start">Ingreso RFID</span>
+              <div class="timeline-axis"><b>36.5 h modeladas</b></div>
+              <span class="timeline-endpoint timeline-endpoint-end">Liberación</span>
+            </div>
+            <div class="duration-breakdown" aria-label="Descomposición de permanencia interna">
+              <div class="duration-bar"><span class="duration-processing"></span><span class="duration-wait"></span></div>
+              <div class="duration-legend"><span><i class="duration-dot duration-dot-processing"></i><strong>Procesamiento</strong> 21.5 h <small>≈ 59 %</small></span><span><i class="duration-dot duration-dot-wait"></i><strong>Espera</strong> 15 h <small>≈ 41 %</small></span></div>
+            </div>
+          </article>
+
+          <p class="timeline-comparison-note">El reloj contractual y la permanencia interna utilizan diferentes eventos de inicio y deben analizarse como indicadores complementarios.</p>
+        </div>
+
+        <div class="source-line">Fuente: Elaboración de Modus Consulting con información proporcionada por Ternium y análisis AS-IS, 2026.</div>
+      </div>
+    </section>
+
+    <section id="alcance" class="section project-section project-scope">
+      <div class="container">
+        <div class="eyebrow">ALCANCE DEL PROYECTO</div>
+        <h2 class="section-title project-heading">Optimizar el proceso antes de ampliar la infraestructura</h2>
+        <p class="project-intro">El proyecto se concentró en entender cómo fluye la información y cómo se toman las decisiones desde la planeación de requerimientos hasta la liberación ferroviaria.</p>
+
+        <div class="row g-4 scope-grid">
+          <div class="col-lg-6">
+            <article class="scope-card">
+              <h3>Dentro del alcance</h3>
+              <ul>
+                <li>Análisis de Planeación, Programación, Ejecución y Monitoreo.</li>
+                <li>Modelado del proceso ferroviario AS-IS.</li>
+                <li>Identificación de actores, flujos de información y puntos de decisión.</li>
+                <li>Análisis de tiempo de ciclo, espera y capacidad.</li>
+                <li>Análisis del ecosistema tecnológico actual.</li>
+                <li>Revisión de indicadores asociados al proceso ferroviario.</li>
+                <li>Benchmarking de prácticas y tecnologías utilizadas en operaciones ferroviarias e industriales.</li>
+                <li>Identificación y diseño conceptual de oportunidades de mejora.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="scope-card scope-card--muted">
+              <h3>Fuera del alcance</h3>
+              <ul>
+                <li>Compra o ampliación de locomotoras, grúas, volcadores, básculas o vías.</li>
+                <li>Modificación de infraestructura ferroviaria externa.</li>
+                <li>Renegociación de contratos, tarifas o penalizaciones con las empresas ferroviarias.</li>
+                <li>Desarrollo o despliegue productivo de software.</li>
+                <li>Implementación física de las soluciones propuestas.</li>
+                <li>Gestión del cambio y capacitación operativa.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="design-principle">
+          <span class="principle-label">PRINCIPIO DE DISEÑO</span>
+          <p>“Primero aprovechar e integrar la capacidad y tecnología existente; después evaluar nuevas inversiones.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagnostico" class="section project-section project-diagnostics">
+      <div class="container">
+        <div class="eyebrow">DIAGNÓSTICO EJECUTIVO</div>
+        <h2 class="section-title project-heading">La información existe, pero no fluye como una sola operación</h2>
+        <p class="project-intro project-intro--wide">Ternium ya cuenta con diferentes habilitadores tecnológicos para gestionar la operación ferroviaria. La oportunidad identificada no parte de una ausencia total de tecnología, sino de la fragmentación entre sistemas, canales de comunicación y decisiones operativas.</p>
+
+        <div class="mini-caption">“La mayor oportunidad aparece en la conexión entre etapas, no en una actividad aislada.”</div>
+
+        <div class="process-map" aria-label="Mapa del flujo del proceso ferroviario">
+          <article class="process-step step-1">
+            <h4>Planeación</h4>
+            <span>Excel</span>
+            <small>Necesidades + plan</small>
+          </article>
+          <article class="process-step step-2">
+            <h4>Programación</h4>
+            <span>Excel / correo / Teams</span>
+            <small>Restricciones + solicitud</small>
+          </article>
+          <article class="process-step step-3">
+            <h4>Origen</h4>
+            <span>Proveedor / FFCC</span>
+            <small>Preparación y carga</small>
+          </article>
+          <article class="process-step step-4">
+            <h4>Tránsito</h4>
+            <span>B2B / SharePoint / Power BI</span>
+            <small>Eventos ferroviarios</small>
+          </article>
+          <article class="process-step step-5">
+            <h4>Operación en planta</h4>
+            <span>RFID / radio / WhatsApp / sistemas operativos</span>
+            <small>Recepción + asignación + descarga</small>
+          </article>
+          <article class="process-step step-6">
+            <h4>Monitoreo y control</h4>
+            <span>Power BI / registros</span>
+            <small>Indicadores + demoras</small>
+          </article>
+        </div>
+
+        <div class="process-scales">
+          <div class="eyebrow">LECTURA DEL PROCESO</div>
+          <h3 class="section-title process-scales-title">Tres escalas para entender dónde se pierde el tiempo</h3>
+          <p class="process-scales-intro">El análisis utiliza distintos intervalos para estudiar el ciclo ferroviario. Cada uno responde a una pregunta diferente y no deben interpretarse como el mismo indicador.</p>
+          <div class="scales-composition">
+            <article class="scale-card scale-card-complete">
+              <div class="scale-card-top"><span class="scale-index">01</span><span class="scale-label">PROCESO COMPLETO</span></div>
+              <strong class="scale-value">330.5 h</strong>
+              <span class="scale-name">Ruta crítica modelada</span>
+              <div class="scale-metrics"><span><strong>123.5 h</strong>Procesamiento</span><span><strong>207 h</strong>Espera</span><span><strong>37.4 %</strong>Eficiencia del ciclo</span></div>
+              <div class="scale-bar" role="img" aria-label="37.4 por ciento procesamiento y 62.6 por ciento espera"><span class="scale-bar-processing"></span><span class="scale-bar-wait"></span></div>
+              <div class="scale-bar-labels"><span>Procesamiento 37.4 %</span><span>Espera 62.6 %</span></div>
+              <p>Considera el proceso analizado desde las actividades iniciales de planeación hasta el cierre del ciclo.</p>
+            </article>
+            <div class="scale-connector" aria-hidden="true"><span></span><i>OPERACIÓN INTERNA</i></div>
+            <article class="scale-card scale-card-internal">
+              <div class="scale-card-top"><span class="scale-index">02</span><span class="scale-label">PERMANENCIA INTERNA</span></div>
+              <strong class="scale-value">36.5 h*</strong>
+              <span class="scale-name">Ingreso RFID → Liberación</span>
+              <div class="scale-metrics"><span><strong>21.5 h</strong>Procesamiento</span><span><strong>15 h</strong>Espera</span><span><strong>59 %</strong>Procesamiento aprox.</span><span><strong>41 %</strong>Espera aprox.</span></div>
+              <p>Corresponde al modelo AS-IS del flujo interno utilizado como referencia.</p>
+              <small>*Resultado modelado, sujeto a validación mediante medición operativa por evento.</small>
+            </article>
+            <div class="scale-connector scale-connector-contract" aria-hidden="true"><span></span><i>VENTANA CONTRACTUAL</i></div>
+            <article class="scale-card scale-card-contract">
+              <div class="scale-card-top"><span class="scale-index">03</span><span class="scale-label">VENTANA CONTRACTUAL</span></div>
+              <strong class="scale-value">≤ 24 h</strong>
+              <span class="scale-name">Situado en industria → Liberación</span>
+              <div class="contract-scale-facts"><span><small>Inicio</small><strong>Situado en industria</strong></span><span><small>Fin</small><strong>Liberación</strong></span><span><small>Línea base</small><strong>Por medir operacionalmente</strong></span></div>
+              <p>Es el intervalo contractual relevante para determinar el cumplimiento de la ventana de demora.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="transit-evidence">
+          <div class="eyebrow">EVIDENCIA CUANTITATIVA</div>
+          <h3 class="section-title transit-evidence-title">Lo que muestran los datos de tránsito</h3>
+          <p class="transit-evidence-intro">El dataset analizado muestra alta variabilidad y bajo cumplimiento respecto a los estándares ferroviarios definidos.</p>
+          <div class="row g-3 transit-kpis">
+            <div class="col-6 col-lg-3"><article class="transit-kpi"><strong>11.23 %</strong><span>Cumplimiento del estándar analizado</span></article></div>
+            <div class="col-6 col-lg-3"><article class="transit-kpi"><strong>4,512</strong><span>Días excedidos acumulados</span></article></div>
+            <div class="col-6 col-lg-3"><article class="transit-kpi"><strong>4.545 días</strong><span>Tiempo promedio de tránsito</span></article></div>
+            <div class="col-6 col-lg-3"><article class="transit-kpi"><strong>2.833 días</strong><span>Mediana de tránsito</span></article></div>
+          </div>
+          <p class="transit-note">Estos indicadores corresponden a estándares de tránsito del dataset analizado y no equivalen directamente al cumplimiento de la ventana contractual de 24 horas.</p>
+          <p class="transit-source">Fuente: Elaboración de Modus Consulting con información proporcionada por Ternium, 2026.</p>
+        </div>
+
+        <div class="visibility-grid row g-3">
+          <div class="col-md-4">
+            <article class="visibility-card">
+              <h4>Ferromex</h4>
+              <div class="visibility-metric">≈ cada 4 h</div>
+              <small>Actualización disponible</small>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card key-data-card">
-              <div class="card-body">
-                <h5>Datos clave</h5>
-                <ul class="list-unstyled small text-muted">
-                  <li><strong>Empleados:</strong> [Agregar]</li>
-                  <li><strong>Ingresos:</strong> [Agregar]</li>
-                  <li><strong>Sistemas:</strong> [Agregar]</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case for Action -->
-    <section id="diagnostico" class="section bg-alt py-5">
-      <div class="container">
-        <h2 class="section-title">Case for Action</h2>
-        <p class="text-muted">[Agregar resumen de por qué es necesario realizar el proyecto]</p>
-        <div class="row mt-3">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h6>Situación actual</h6>
-                <p class="small text-muted">[Agregar]</p>
-              </div>
-            </div>
+            <article class="visibility-card">
+              <h4>Kansas</h4>
+              <div class="visibility-metric">≈ cada 8 h</div>
+              <small>Actualización disponible</small>
+            </article>
           </div>
           <div class="col-md-4">
-            <div class="card">
+            <article class="visibility-card">
+              <h4>Catálogo FFCC</h4>
+              <div class="visibility-metric">+80 eventos</div>
+              <small>No todos son relevantes para Ternium</small>
+            </article>
+          </div>
+        </div>
+
+        <p class="project-note project-note--tight">La frecuencia actual no implica por sí sola que sea necesario implementar GPS en tiempo real. Una primera oportunidad consiste en homologar los eventos disponibles y utilizarlos para anticipar decisiones operativas.</p>
+
+        <div class="ecosystem" aria-label="Ecosistema tecnológico del proceso ferroviario">
+          <div class="ecosystem-center">OPERACIÓN FERROVIARIA</div>
+          <div class="ecosystem-node node-sap">SAP</div>
+          <div class="ecosystem-node node-bi">Power BI</div>
+          <div class="ecosystem-node node-b2b">B2B</div>
+          <div class="ecosystem-node node-rfid">RFID</div>
+          <div class="ecosystem-node node-excel">Excel</div>
+          <div class="ecosystem-node node-mail">Correo</div>
+          <div class="ecosystem-node node-teams">Teams</div>
+          <div class="ecosystem-node node-whatsapp">WhatsApp</div>
+          <div class="ecosystem-node node-radio">Radio</div>
+        </div>
+
+        <p class="ecosystem-quote">“El problema no es que no existan herramientas. Es que hoy cubren tramos distintos de la operación.”</p>
+      </div>
+    </section>
+
+    <section id="hallazgos" class="section project-section project-findings">
+      <div class="container">
+        <div class="eyebrow">HALLAZGOS PRINCIPALES</div>
+        <h2 class="section-title project-heading">Cinco conclusiones que orientan el diseño de la mejora</h2>
+
+        <div class="findings-grid row g-4">
+          <article class="col-md-6 col-xl-4 finding-card">
+            <div class="finding-number">01</div>
+            <div class="finding-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Información fragmentada</h3>
+            <p>SAP, Power BI, B2B, RFID, Excel, correo, Teams, WhatsApp y radio cubren diferentes segmentos, pero no existe una vista operativa única de la góndola de punta a punta.</p>
+            <span class="finding-tag">Evidencia</span>
+            <small>9 canales / sistemas identificados</small>
+          </article>
+
+          <article class="col-md-6 col-xl-4 finding-card">
+            <div class="finding-number">02</div>
+            <div class="finding-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>Monitorear no siempre activa la preparación</h3>
+            <p>Los eventos de tránsito permiten saber cómo avanza la unidad, pero actualmente esa información no funciona de manera sistemática como disparador de preparación de planta.</p>
+            <span class="finding-tag">Evidencia</span>
+            <small>Actualizaciones FFCC ≈ 4 h / 8 h</small>
+          </article>
+
+          <article class="col-md-6 col-xl-4 finding-card">
+            <div class="finding-number">03</div>
+            <div class="finding-icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>La asignación concentra una espera crítica</h3>
+            <p>En el flujo analizado, asignar la góndola al peine o almacén requiere aproximadamente 0.5 h de trabajo, pero acumula 6 h de espera.</p>
+            <div class="mini-compare">
+              <div class="compare-row"><span>Trabajo</span><strong>█ 0.5 h</strong></div>
+              <div class="compare-row"><span>Espera</span><strong>████████████ 6 h</strong></div>
+            </div>
+            <span class="finding-tag">Evidencia</span>
+            <small>Relación espera / trabajo = 12 : 1</small>
+          </article>
+
+          <article class="col-md-6 col-xl-4 finding-card">
+            <div class="finding-number">04</div>
+            <div class="finding-icon"><i class="fa-solid fa-stopwatch"></i></div>
+            <h3>No existe un reloj operativo común</h3>
+            <p>Los registros permiten analizar lo ocurrido, pero no existe una visualización compartida que muestre durante la operación cuánto tiempo ha consumido cada unidad, su riesgo y su siguiente acción.</p>
+            <span class="finding-tag">Evidencia</span>
+            <small>Demora registrada después del evento</small>
+          </article>
+
+          <article class="col-md-6 col-xl-4 finding-card">
+            <div class="finding-number">05</div>
+            <div class="finding-icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>No todos los materiales requieren la misma lógica</h3>
+            <p>Chatarra, mineral y HRD siguen operaciones diferentes. La chatarra incorpora separación y control radiológico, mientras mineral y HRD utilizan secuencias asociadas al volcador y muestreo.</p>
+            <span class="finding-tag">Evidencia</span>
+            <small>Procesos internos diferenciados por material</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-cta">
+      <div class="container">
+        <div class="eyebrow eyebrow-light">DEL DIAGNÓSTICO AL DISEÑO</div>
+        <h2>La oportunidad está en convertir información existente en decisiones anticipadas</h2>
+        <p>A partir de estos hallazgos, Modus Consulting desarrolló una propuesta orientada a anticipar arribos, coordinar la operación dentro de planta y controlar la ventana penalizada.</p>
+        <div class="cta-actions">
+          <a href="#propuesta" class="btn btn-light">Conocer la propuesta</a>
+          <a href="#entregables" class="btn btn-outline-light">Ver entregables</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Análisis de tiempo de ciclo -->
+    <section id="tiempo-ciclo" class="section cycle-time-section py-5">
+      <div class="container">
+        <h2 class="section-title">Análisis de tiempo de ciclo</h2>
+        <p class="text-muted mb-4">La distribución del tiempo muestra que la espera representa la mayor oportunidad de mejora dentro del proceso ferroviario.</p>
+        <div class="row g-3 cycle-time-metrics">
+          <div class="col-6 col-lg-3">
+            <article class="card cycle-metric-card h-100">
               <div class="card-body">
-                <h6>Ineficiencias</h6>
-                <p class="small text-muted">[Agregar]</p>
+                <span class="cycle-metric-label">Procesamiento</span>
+                <strong class="cycle-metric-value">123.5 h</strong>
               </div>
-            </div>
+            </article>
           </div>
-          <div class="col-md-4">
-            <div class="card">
+          <div class="col-6 col-lg-3">
+            <article class="card cycle-metric-card h-100">
               <div class="card-body">
-                <h6>Impacto</h6>
-                <p class="small text-muted">[Agregar]</p>
+                <span class="cycle-metric-label">Espera</span>
+                <strong class="cycle-metric-value cycle-wait-value">207 h</strong>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Metodología -->
-    <section id="metodologia" class="section py-5">
-      <div class="container">
-        <h2 class="section-title">Metodología</h2>
-        <p class="text-muted">[Agregar descripción general de la metodología]</p>
-        <div class="process-steps mt-4">
-          <ol class="timeline">
-            <li><strong>Entendimiento</strong><p class="small text-muted">[Agregar]</p></li>
-            <li><strong>Levantamiento</strong><p class="small text-muted">[Agregar]</p></li>
-            <li><strong>Análisis</strong><p class="small text-muted">[Agregar]</p></li>
-            <li><strong>Diagnóstico</strong><p class="small text-muted">[Agregar]</p></li>
-            <li><strong>Priorizar</strong><p class="small text-muted">[Agregar]</p></li>
-            <li><strong>Propuesta</strong><p class="small text-muted">[Agregar]</p></li>
-            <li><strong>Implementación</strong><p class="small text-muted">[Agregar]</p></li>
-            <li><strong>Resultados</strong><p class="small text-muted">[Agregar]</p></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- Arquitectura empresarial -->
-    <section id="arquitectura" class="section bg-light py-5">
-      <div class="container">
-        <h2 class="section-title">Arquitectura empresarial</h2>
-        <p class="text-muted">Subsecciones: negocio, procesos, personas, tecnología, datos. [Agregar contenido]</p>
-        <p class="small text-muted">Marcos sugeridos: TOGAF, COBIT, BPMN.</p>
-      </div>
-    </section>
-
-    <!-- Procesos -->
-    <section id="procesos" class="section py-5">
-      <div class="container">
-        <h2 class="section-title">Procesos</h2>
-        <div class="row" id="process-list">
-          <!-- Ejemplo de tarjeta de proceso -->
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <div class="col-6 col-lg-3">
+            <article class="card cycle-metric-card h-100">
               <div class="card-body">
-                <h5>Proceso: [Nombre del proceso]</h5>
-                <p class="small text-muted">Descripción breve</p>
-                <p class="small text-muted"><strong>Responsable:</strong> [Agregar]</p>
-                <a href="#" class="btn btn-sm btn-outline-primary view-process" data-bs-toggle="modal" data-process="1">Ver proceso</a>
+                <span class="cycle-metric-label">Tiempo total</span>
+                <strong class="cycle-metric-value">330.5 h</strong>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
-
-        <!-- Modal para ver proceso -->
-        <div class="modal fade" id="processModal" tabindex="-1">
-          <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Detalle del proceso</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-              </div>
-              <div class="modal-body">
-                <p>[Aquí se mostrará la información detallada del proceso]</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- AS-IS -->
-    <section id="as-is" class="section bg-alt py-5">
-      <div class="container">
-        <h2 class="section-title">AS-IS</h2>
-        <p class="text-muted">[Agregar diagrama y descripción del estado actual]</p>
-      </div>
-    </section>
-
-    <!-- Pain Points -->
-    <section id="painpoints" class="section py-5">
-      <div class="container">
-        <h2 class="section-title">Pain Points</h2>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <div class="col-6 col-lg-3">
+            <article class="card cycle-metric-card h-100">
               <div class="card-body">
-                <h6>Retrabajo excesivo</h6>
-                <p class="small text-muted">Impacto: Alto. Evidencia: [Agregar]</p>
-                <span class="badge bg-danger">Alta</span>
+                <span class="cycle-metric-label">Eficiencia</span>
+                <strong class="cycle-metric-value cycle-efficiency-value">37.4 %</strong>
               </div>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Análisis causa raíz -->
-    <section id="causa-raiz" class="section bg-light py-5">
-      <div class="container">
-        <h2 class="section-title">Análisis causa raíz</h2>
-        <p class="text-muted">Herramientas: 5 Whys, Ishikawa, Pareto. [Agregar resultados]</p>
-      </div>
-    </section>
-
-    <!-- Métricas y KPIs -->
-    <section id="kpis" class="section py-5">
-      <div class="container">
-        <h2 class="section-title">Métricas y KPIs</h2>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="kpi-card card text-center p-3">
-              <div class="kpi-value" data-target="72">0</div>
-              <div class="kpi-label small text-muted">Tiempo promedio (hrs)</div>
-            </div>
+        <div class="cycle-bar-panel mt-4">
+          <div class="cycle-bar-heading">
+            <span>Distribución del tiempo de ciclo</span>
+            <strong>37.4 % valor agregado | 62.6 % espera</strong>
           </div>
-          <div class="col-md-3">
-            <div class="kpi-card card text-center p-3">
-              <div class="kpi-value" data-target="15">0</div>
-              <div class="kpi-label small text-muted">Errores / mes</div>
-            </div>
+          <div class="cycle-bar" role="img" aria-label="37.4 por ciento de valor agregado y 62.6 por ciento de espera">
+            <span class="cycle-bar-value"></span>
+            <span class="cycle-bar-wait"></span>
           </div>
-          <div class="col-md-3">
-            <div class="kpi-card card text-center p-3">
-              <div class="kpi-value" data-target="40">0</div>
-              <div class="kpi-label small text-muted">% Automatización</div>
-            </div>
+          <div class="cycle-bar-legend" aria-hidden="true">
+            <span><i class="cycle-dot cycle-dot-value"></i>Valor agregado</span>
+            <span><i class="cycle-dot cycle-dot-wait"></i>Espera</span>
           </div>
         </div>
       </div>
@@ -276,103 +537,134 @@
     <section id="entregables" class="section bg-alt py-5">
       <div class="container">
         <h2 class="section-title">Entregables</h2>
-        <div class="mb-3">
-          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="all">Todos</button>
-          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="diagnostico">Diagnóstico</button>
-          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="analisis">Análisis</button>
-          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="propuesta">Propuesta</button>
+        <p class="deliverables-intro text-muted">Documentación, análisis y artefactos desarrollados por Modus Consulting durante el proyecto de optimización de la Central de Ferrocarril de Ternium.</p>
+        <div class="mb-3 deliverable-filters">
+          <button class="btn btn-sm filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="diagnostico" aria-pressed="false">Diagnóstico</button>
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="analisis" aria-pressed="false">Análisis</button>
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="propuesta" aria-pressed="false">Diseño / Propuesta</button>
+          <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="anexos" aria-pressed="false">Anexos</button>
         </div>
-        <div class="row" id="deliverables-list">
-          <div class="col-md-4 deliverable-item" data-stage="diagnostico">
-            <div class="card">
-              <div class="card-body">
-                <h5>Fase 1 – Análisis del Proceso</h5>
-                <p class="small text-muted">Contexto de la empresa, Análisis del proceso AS-IS.</p>
-                <div class="d-flex gap-2">
-                  <a href="https://drive.google.com/file/d/1goyNF0HVIw0jCPFUDxoLwxIlo33Sr8yG/view?usp=sharing" class="btn btn-sm btn-primary">Ver</a>
-                  <a href="documents/Etapa 1_Analisis del Proceso.pdf" class="btn btn-sm btn-outline-primary" download>Descargar</a>
-                </div>
-              </div>
+        <div class="row g-4" id="deliverables-list"></div>
+      </div>
+    </section>
+
+    <!-- Propuesta -->
+    <section id="propuesta" class="proposal-hero">
+      <div class="container">
+        <div class="proposal-hero-grid">
+          <div>
+            <div class="eyebrow">PROPUESTA DE SOLUCIÓN</div>
+            <h1 class="proposal-title">De información fragmentada a una operación ferroviaria coordinada</h1>
+            <p class="proposal-lead">Una propuesta para anticipar arribos, preparar la operación y controlar la ventana contractual utilizando primero la información, tecnología y capacidad que Ternium ya tiene disponibles.</p>
+            <p class="proposal-mantra">RASTREO anticipa. TORRE ejecuta.</p>
+            <div class="proposal-actions">
+              <a href="#solucion" class="btn btn-primary">Conocer la solución</a>
+              <a href="#tobe" class="btn btn-outline-primary">Ver proceso futuro</a>
             </div>
           </div>
+          <div class="proposal-flow" aria-label="Flujo conceptual de RASTREO y TORRE">
+            <div class="flow-label">ANTES DEL ARRIBO</div>
+            <div class="flow-stage flow-stage-tracking"><strong>RASTREO</strong><span>Visibilidad · ETA · Alertas</span></div>
+            <div class="flow-connector"></div>
+            <div class="flow-bridge"><strong>SITUADO EN INDUSTRIA</strong><span>Inicio de ventana contractual</span></div>
+            <div class="flow-window">24 h</div>
+            <div class="flow-connector"></div>
+            <div class="flow-stage flow-stage-tower"><strong>TORRE</strong><span>Coordinar · Priorizar · Ejecutar</span></div>
+            <div class="flow-connector"></div>
+            <div class="flow-release">LIBERACIÓN</div>
+          </div>
+        </div>
+        <p class="proposal-caption">Dos componentes, una misma operación.</p>
+        <nav class="proposal-subnav" aria-label="Navegación de propuesta">
+          <a href="#oportunidades">Oportunidades</a>
+          <a href="#solucion">Solución</a>
+          <a href="#rastreo">RASTREO</a>
+          <a href="#torre">TORRE</a>
+          <a href="#tobe">TO-BE</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#impacto">Impacto</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="oportunidades" class="section proposal-section">
+      <div class="container">
+        <div class="eyebrow">DE LOS HALLAZGOS A LA SOLUCIÓN</div>
+        <h2 class="section-title proposal-heading">La propuesta responde a oportunidades concretas del diagnóstico</h2>
+        <div class="row g-4 opportunity-grid">
+          <div class="col-md-6 col-xl-3"><article class="opportunity-card"><span class="opportunity-number">01</span><h3>Preparar antes del arribo</h3><p><strong>Problema:</strong> El seguimiento ferroviario registra avances, pero no siempre activa acciones posteriores.</p><p><strong>Oportunidad:</strong> Convertir eventos de tránsito en alertas para preparar vía, personal y recursos.</p><span class="proposal-tag">Anticipación</span></article></div>
+          <div class="col-md-6 col-xl-3"><article class="opportunity-card"><span class="opportunity-number">02</span><h3>Decidir antes de acumular espera</h3><p><strong>Problema:</strong> La asignación al peine o almacén presenta 6 h modeladas de espera frente a 0.5 h de trabajo.</p><p><strong>Oportunidad:</strong> Preasignar o recomendar destino con información de material, capacidad y estado operativo.</p><span class="proposal-tag">Decisión</span></article></div>
+          <div class="col-md-6 col-xl-3"><article class="opportunity-card"><span class="opportunity-number">03</span><h3>Gestionar la ventana mientras ocurre</h3><p><strong>Problema:</strong> Las demoras se identifican principalmente después del hecho.</p><p><strong>Oportunidad:</strong> Crear un reloj común por unidad con riesgo, responsable y siguiente actividad.</p><span class="proposal-tag">Control</span></article></div>
+          <div class="col-md-6 col-xl-3"><article class="opportunity-card"><span class="opportunity-number">04</span><h3>Integrar lo que ya existe</h3><p><strong>Problema:</strong> RFID, B2B, Power BI, SAP y canales manuales cubren partes diferentes del proceso.</p><p><strong>Oportunidad:</strong> Crear una capa operativa común sin sustituir inicialmente los sistemas existentes.</p><span class="proposal-tag">Integración</span></article></div>
+        </div>
+        <div class="proposal-callout"><strong>El objetivo no es incorporar más tecnología por sí misma, sino conectar información con decisiones.</strong></div>
+      </div>
+    </section>
+
+    <section id="solucion" class="section proposal-section proposal-section-alt">
+      <div class="container">
+        <div class="eyebrow">SOLUCIÓN PROPUESTA</div>
+        <h2 class="section-title proposal-heading">Dos componentes para cubrir el ciclo completo</h2>
+        <div class="row g-4 solution-grid">
+          <div class="col-lg-6"><article class="solution-card solution-card-tracking"><div class="solution-kicker">COMPONENTE 01</div><h3>RASTREO</h3><h4>Visibilidad y preparación anticipada</h4><p>Utiliza la información ferroviaria disponible antes del arribo para traducir estados externos en una secuencia útil para la operación de Ternium y anticipar las acciones de preparación.</p><ol class="capability-list"><li>Homologar eventos</li><li>Estimar llegada</li><li>Activar preparación</li></ol><div class="solution-footer"><span>ANTES DE LA VENTANA / ARRIBO</span><a href="#rastreo" class="btn btn-sm btn-primary">Explorar RASTREO</a></div></article></div>
+          <div class="col-lg-6"><article class="solution-card solution-card-tower"><div class="solution-kicker">COMPONENTE 02</div><h3>TORRE</h3><h4>Coordinación de la operación ferroviaria</h4><p>Concentra el estado de las unidades que requieren atención, muestra el tiempo consumido, apoya la asignación y coordina las acciones necesarias hasta su liberación.</p><ol class="capability-list"><li>Controlar tiempo</li><li>Priorizar unidades</li><li>Coordinar ejecución</li></ol><div class="solution-footer"><span>VENTANA CONTRACTUAL / OPERACIÓN</span><a href="#torre" class="btn btn-sm btn-light">Explorar TORRE</a></div></article></div>
+        </div>
+        <div class="gondola-flow" aria-label="Una góndola, dos capas de operación">
+          <div class="gondola-title">UNA GÓNDOLA, DOS CAPAS</div>
+          <div class="gondola-lane gondola-lane-top"><strong>RASTREO</strong><span>Origen</span><span>Tránsito</span><span>Aduana</span><span>Aproximación</span><span class="gondola-transition">Situado</span></div>
+          <div class="gondola-lane gondola-lane-bottom"><strong>TORRE</strong><span class="gondola-transition">Situado</span><span>Ingreso</span><span>Asignación</span><span>Proceso</span><span>Descarga</span><span>Liberación</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Propuesta / TO-BE -->
-    <section id="propuesta" class="section py-5">
+    <section id="rastreo" class="section proposal-section proposal-section-blue">
       <div class="container">
-        <h2 class="section-title">Propuesta de mejora / TO-BE</h2>
-        <p class="text-muted">[Descripción de la propuesta]</p>
-        <div class="row">
-          <div class="col-md-6">
-            <h6>AS-IS</h6>
-            <ul class="small text-muted">
-              <li>Actividades manuales</li>
-              <li>Retrabajos</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h6>TO-BE</h6>
-            <ul class="small text-muted">
-              <li>Automatización</li>
-              <li>Estandarización</li>
-            </ul>
-          </div>
-        </div>
+        <div class="eyebrow">COMPONENTE 01</div>
+        <h2 class="section-title proposal-heading">RASTREO — Convertir eventos ferroviarios en anticipación operativa</h2>
+        <p class="proposal-intro">Ternium ya recibe información del tránsito ferroviario. La propuesta no depende de instalar GPS propio ni de obtener una API en la primera etapa; parte de las actualizaciones actualmente disponibles y busca convertirlas en estados homologados, estimaciones de llegada y disparadores de preparación.</p>
+        <div class="data-assumptions"><span>Ferromex: actualizaciones aproximadas cada 4 h</span><span>Kansas: actualizaciones aproximadas cada 8 h</span><span>Catálogo actual: más de 80 eventos ferroviarios</span><small>Frecuencias de referencia, no tiempo real.</small></div>
+        <div class="event-translator"><div class="translator-side"><h3>Información ferroviaria</h3><div class="event-pills"><span>Salida</span><span>Intercambio</span><span>Arribo patio</span><span>Aduana</span><span>HOLD</span><span>Liberado</span><span>Situado</span><span>Otros eventos...</span></div></div><div class="translator-core"><strong>HOMOLOGACIÓN</strong><span>→</span></div><div class="translator-side translator-result"><h3>Estado operativo Ternium</h3><div class="state-sequence"><span>EN ORIGEN</span><span>EN TRÁNSITO</span><span>ADUANA / RESTRICCIÓN</span><span>APROXIMACIÓN</span><span>SITUADO EN INDUSTRIA</span><span>ATENCIÓN EN PLANTA</span></div></div></div>
+        <p class="translator-note">+80 eventos <span>→</span> pocos estados accionables</p>
+        <div class="subheading-row"><div class="eyebrow">CÓMO FUNCIONARÍA RASTREO</div></div>
+        <div class="row g-4 tracking-steps"><div class="col-md-4"><article class="numbered-card"><span>01</span><h3>Consumir la información disponible</h3><p>Utilizar las actualizaciones ferroviarias que hoy alimentan SharePoint, bases de datos y visualizaciones existentes, sin proponer reemplazar inmediatamente ese canal.</p></article></div><div class="col-md-4"><article class="numbered-card"><span>02</span><h3>Homologar estados</h3><p>Traducir los eventos de cada ferrocarrilera a una secuencia operativa común y comprensible para Central de Ferrocarril y planta.</p></article></div><div class="col-md-4"><article class="numbered-card"><span>03</span><h3>Convertir estado en acción</h3><p>Generar ETA operacional, nivel de proximidad y alertas para preparar recursos antes del evento situado en industria.</p></article></div></div>
+        <div class="tracking-bottom row g-4 align-items-start"><div class="col-lg-7"><div class="maturity-line"><div><span>ETAPA 1</span><strong>Datos actuales 4 h / 8 h</strong></div><i>↓</i><div><span>ETAPA 2</span><strong>Homologación + alertas</strong></div><i>↓</i><div><span>ETAPA 3</span><strong>Mayor frecuencia / conexión directa si se habilita</strong></div></div><p class="small text-muted">Una API o conexión de mayor frecuencia mejora la solución, pero no es requisito para comenzar.</p></div><div class="col-lg-5"><article class="alert-mockup"><div class="mockup-label">EJEMPLO DE INTERFAZ CONCEPTUAL</div><h3>PRÓXIMO ARRIBO</h3><div class="alert-grid"><span>Material</span><strong>Chatarra</strong><span>Estado</span><strong>En aproximación</strong><span>ETA operacional</span><strong>06:30 – 08:30</strong><span>Acción sugerida</span><strong>Validar vía disponible y capacidad de recepción.</strong><span>Origen de información</span><strong>Último evento FFCC</strong></div><small>Mockup conceptual, no dato real en vivo.</small></article></div></div>
       </div>
     </section>
 
-    <!-- Roadmap -->
-    <section id="roadmap" class="section bg-light py-5">
+    <section id="torre" class="section proposal-section">
       <div class="container">
-        <h2 class="section-title">Roadmap</h2>
-        <p class="text-muted">Corto, mediano y largo plazo. [Agregar acciones y responsables]</p>
+        <div class="eyebrow">COMPONENTE 02</div>
+        <h2 class="section-title proposal-heading">TORRE — Una vista común de la operación dentro de la ventana contractual</h2>
+        <p class="proposal-intro">TORRE propone concentrar en una sola vista operativa el tiempo consumido, estado, prioridad, destino y siguiente acción de cada unidad, utilizando e integrando progresivamente las fuentes actuales de Ternium.</p>
+        <p class="layer-note"><strong>TORRE es una capa de coordinación.</strong> No sustituye inicialmente SAP, Power BI, RFID, portales ferroviarios ni sistemas operativos de planta.</p>
+        <div class="tower-mockup"><div class="tower-header"><div><span class="mockup-label">PROTOTIPO CONCEPTUAL — DATOS ILUSTRATIVOS</span><h3>TORRE · Operación ferroviaria</h3></div><span class="tower-status"><i></i> Vista operativa</span></div><div class="tower-kpis"><div><span>Unidades activas</span><strong>17</strong></div><div><span>En riesgo</span><strong>4</strong></div><div><span>Críticas</span><strong>2</strong></div><div><span>Liberadas hoy</span><strong>11</strong></div></div><div class="tower-table-wrap"><table class="tower-table"><thead><tr><th>Unidad</th><th>Material</th><th>Estado</th><th>Tiempo</th><th>Vía</th><th>Riesgo</th><th>Acción</th></tr></thead><tbody><tr><td>GND-0842</td><td>Chatarra</td><td>Espera asignación</td><td>18:35</td><td>—</td><td><span class="risk risk-high">Alto</span></td><td>Asignar vía</td></tr><tr><td>GND-0711</td><td>Mineral</td><td>Descarga</td><td>10:12</td><td>Volcador</td><td><span class="risk risk-low">Bajo</span></td><td>Monitorear</td></tr><tr><td>GND-0635</td><td>HRD</td><td>Pesaje</td><td>21:06</td><td>Vía 4</td><td><span class="risk risk-critical">Crítico</span></td><td>Priorizar</td></tr><tr><td>GND-0921</td><td>Chatarra</td><td>Ingreso</td><td>04:42</td><td>Vía 9</td><td><span class="risk risk-low">Bajo</span></td><td>Inspección</td></tr></tbody></table></div></div>
+        <div class="row g-3 tower-modules"><div class="col-md-6 col-lg-4"><article class="module-card"><span>01</span><h3>Reloj de ventana</h3><p>Mide el tiempo desde situado en industria hasta liberación y muestra cuánto margen contractual queda.</p><small><strong>Contractual:</strong> Situado → Liberación<br><strong>Interno:</strong> Ingreso RFID → Egreso RFID</small></article></div><div class="col-md-6 col-lg-4"><article class="module-card"><span>02</span><h3>Estado por unidad</h3><p>Concentra el estado operativo de cada góndola y su siguiente actividad: situado, ingreso, inspección, pesaje, asignación, separación, descarga y liberación.</p></article></div><div class="col-md-6 col-lg-4"><article class="module-card"><span>03</span><h3>Asignación y priorización</h3><p>Apoya al supervisor visualizando vía, peine o recurso disponible según material, capacidad y prioridad. La decisión final sigue siendo operativa.</p></article></div><div class="col-md-6 col-lg-6"><article class="module-card"><span>04</span><h3>Alertas y responsables</h3><p>Genera alertas conforme disminuye el margen de la ventana y muestra qué área debe ejecutar la siguiente acción.</p><div class="thresholds"><span>Normal &lt; 16 h</span><span>Atención 16–20 h</span><span>Prioridad 20–22 h</span><span>Crítico &gt; 22 h</span></div><small>Umbrales conceptuales, por configurar con Ternium.</small></article></div><div class="col-md-6 col-lg-6"><article class="module-card"><span>05</span><h3>Bitácora e indicadores</h3><p>Registra eventos internos y causas de espera para convertir la operación diaria en información histórica utilizable.</p><div class="module-kpis"><span>Tiempo por estado</span><span>Tiempo de espera</span><span>Cumplimiento &lt; 24 h</span><span>Causas de demora</span><span>Tiempo de liberación</span></div></article></div></div>
+        <div class="hub-layout"><div class="hub-center">TORRE</div><span>RASTREO / B2B</span><span>RFID</span><span>SAP</span><span>Power BI</span><span>Portal de radiación</span><span>Bitácora operativa</span><span>Portales FFCC</span></div><p class="hub-caption">Integrar progresivamente, no reemplazar.</p>
+        <div class="architecture-note"><div class="eyebrow">ARQUITECTURA CONCEPTUAL</div><h3>Una base gradual para coordinar información y acción</h3><p>Power Apps · Power Automate · Power BI · SharePoint / Dataverse · Integraciones existentes</p><small>La arquitectura tecnológica definitiva requiere validación con TI Ternium, licenciamiento, ciberseguridad y disponibilidad de conectores.</small></div>
       </div>
     </section>
 
-    <!-- Resultados / Impacto esperado -->
-    <section id="resultados" class="section py-5">
+    <section id="tobe" class="section proposal-section proposal-section-blue">
       <div class="container">
-        <h2 class="section-title">Resultados / Impacto esperado</h2>
-        <p class="text-muted">[Indicadores de ejemplo, reemplazar por datos reales]</p>
+        <div class="eyebrow">PROCESO FUTURO</div>
+        <h2 class="section-title proposal-heading">La principal diferencia: preparar y decidir antes</h2>
+        <div class="compare-flow row g-4"><div class="col-lg-6"><article class="flow-compare as-is"><h3>AS-IS</h3><div class="flow-list"><span>Tránsito</span><span>Actualización</span><span>Consulta manual</span><span>Aviso</span><span>Arribo</span><span>Reacción</span><span>Asignación</span><span>Descarga</span><span>Liberación</span></div><strong>Información → espera → decisión</strong></article></div><div class="col-lg-6"><article class="flow-compare to-be"><h3>TO-BE</h3><div class="flow-list"><span>Tránsito</span><span>RASTREO interpreta evento</span><span>ETA + alerta</span><span>Preparación de planta</span><span>Situado</span><span>TORRE inicia / controla ventana</span><span>Preasignación / prioridad</span><span>Ejecución</span><span>Liberación asistida</span><span>Registro de resultado</span></div><strong>Información → acción → ejecución</strong></article></div></div>
+        <div class="swimlane"><div class="swimlane-head"><span>FFCC</span><span>RASTREO</span><span>Central / TORRE</span><span>Operaciones Planta</span></div><div class="swimlane-row"><span>Actualiza evento ferroviario</span><span>Homologa estado<br>Calcula proximidad / ETA</span><span>Genera alerta de preparación</span><span>Valida disponibilidad</span></div><div class="swimlane-row"><span>Situado en industria</span><span>—</span><span>Inicia reloj contractual<br>Propone prioridad / destino</span><span>Ejecuta ingreso y recepción</span></div><div class="swimlane-row"><span>—</span><span>—</span><span>Actualiza estado<br>Confirma / registra liberación</span><span>Descarga</span></div></div><p class="small text-muted">Swimlane ejecutivo conceptual; requiere validación con las áreas operativas.</p>
       </div>
     </section>
 
-    <!-- Bitácora -->
-    <section id="bitacora" class="section bg-alt py-5">
-      <div class="container">
-        <h2 class="section-title">Bitácora del proyecto</h2>
-        <div class="timeline-entries">
-          <div class="timeline-entry">
-            <strong>Semana 1:</strong> [Agregar actividades]
-          </div>
-        </div>
-      </div>
+    <section id="roadmap" class="section proposal-section">
+      <div class="container"><div class="eyebrow">IMPLEMENTACIÓN PROPUESTA</div><h2 class="section-title proposal-heading">Comenzar con visibilidad y control antes de avanzar a predicción</h2><div class="roadmap-grid"><article class="roadmap-phase"><span>FASE 1</span><h3>VISIBILIDAD</h3><ul><li>Homologación de eventos</li><li>Estados comunes</li><li>Reloj contractual</li><li>Vista básica de unidades</li></ul><strong>Una fuente operativa común</strong></article><article class="roadmap-phase"><span>FASE 2</span><h3>COORDINACIÓN</h3><ul><li>Alertas</li><li>Responsables</li><li>Bitácora digital</li><li>Estados internos</li></ul><strong>Información que dispara acciones</strong></article><article class="roadmap-phase"><span>FASE 3</span><h3>DECISIÓN</h3><ul><li>Preasignación</li><li>Reglas de prioridad</li><li>Capacidad visible</li><li>Secuenciación</li></ul><strong>Menor decisión reactiva</strong></article><article class="roadmap-phase"><span>FASE 4</span><h3>OPTIMIZACIÓN</h3><ul><li>ETA refinado</li><li>Análisis histórico</li><li>Predicción</li><li>Mejora continua</li></ul><strong>Decisiones basadas en comportamiento real</strong></article></div><p class="small text-muted">Las fases muestran una evolución conceptual. No se asignan fechas, costos ni duración sin validación.</p></div>
     </section>
 
-    <!-- Evidencias / Galería -->
-    <section id="evidencias" class="section py-5">
-      <div class="container">
-        <h2 class="section-title">Evidencias</h2>
-        <div class="row gallery">
-          <div class="col-md-3 mb-3">
-            <img src="images/example1.jpg" alt="Evidencia" class="img-fluid gallery-item" data-full="images/example1.jpg" onerror="this.style.display='none'">
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Modal -->
-      <div class="modal fade" id="galleryModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body text-center">
-              <img src="" id="galleryImage" class="img-fluid" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="impacto" class="section proposal-section proposal-section-alt">
+      <div class="container"><div class="eyebrow">CÓMO MEDIR EL RESULTADO</div><h2 class="section-title proposal-heading">La propuesta debe demostrar su valor con operación, no con percepción</h2><div class="impact-table-wrap"><table class="impact-table"><thead><tr><th>Indicador</th><th>Situación base</th><th>Objetivo</th></tr></thead><tbody><tr><th>Cumplimiento de ventana</th><td>Por medir con reloj contractual</td><td>↑ % liberadas dentro de 24 h</td></tr><tr><th>Tiempo de permanencia</th><td>36.5 h modeladas para el flujo analizado</td><td>≤ 24 h</td></tr><tr><th>Tiempo de espera</th><td>15 h modeladas en flujo analizado</td><td>Reducir espera no productiva</td></tr><tr><th>Asignación</th><td>6 h de espera modelada</td><td>Reducir espera previa a asignación</td></tr><tr><th>Visibilidad</th><td>Información fragmentada entre etapas</td><td>Estado común por unidad</td></tr><tr><th>Gestión</th><td>Análisis principalmente posterior</td><td>Alertas durante la operación</td></tr></tbody></table></div><p class="small text-muted">Meta conceptual del proyecto; requiere validación por material. No representa ahorro monetario ni ROI.</p><div class="impact-tree"><div><strong>RASTREO</strong><span>Más anticipación</span><span>Preparación previa</span></div><b>→ Menos espera →<br>Mayor cumplimiento &lt;24 h</b><div><strong>TORRE</strong><span>Mejor coordinación</span><span>Decisiones más rápidas</span></div></div><p class="impact-note">Impacto esperado, sujeto a validación mediante piloto.</p><div class="arrival-case"><div class="eyebrow">CASO ILUSTRATIVO</div><h3>Cómo cambia una llegada</h3><div class="row g-4"><div class="col-md-6"><h4>HOY</h4><p><strong>15:00</strong> Evento ferroviario cambia</p><p><strong>20:00</strong> Información es identificada por siguiente turno</p><p><strong>Arribo</strong> Se prepara operación de forma reactiva</p><p><strong>Después</strong> Se define prioridad / destino</p></div><div class="col-md-6"><h4>CON LA PROPUESTA</h4><p><strong>15:00</strong> RASTREO interpreta cambio</p><p><strong>15:01</strong> Actualiza estado operativo</p><p><strong>15:02</strong> TORRE genera alerta de preparación</p><p><strong>Antes del arribo</strong> Planta valida recurso y posible destino</p><p><strong>Situado</strong> Inicia reloj contractual</p><p><strong>Ingreso</strong> La operación ya cuenta con contexto previo</p></div></div><small>Ejemplo conceptual inspirado en el levantamiento; no representa el comportamiento diario de todas las unidades.</small></div></div>
     </section>
+
+    <section class="proposal-principles"><div class="container"><div class="principle-strip"><div><strong>NO DEPENDER DE TIEMPO REAL</strong><span>La primera versión funciona con los datos disponibles.</span></div><div><strong>NO REEMPLAZAR SISTEMAS</strong><span>Integrar antes de sustituir.</span></div><div><strong>NO ELIMINAR EL CRITERIO OPERATIVO</strong><span>Dar información al supervisor, no reemplazarlo.</span></div><div><strong>NO EMPEZAR POR INFRAESTRUCTURA</strong><span>Reducir primero las esperas identificadas.</span></div></div></div></section>
+
+    <section class="proposal-cta"><div class="container"><div class="eyebrow eyebrow-light">SIGUIENTE PASO</div><h2>Validar la solución con la operación real</h2><p>El siguiente paso propuesto es validar eventos, reglas de prioridad, responsables e indicadores con Central de Ferrocarril, Operaciones y TI antes de construir un piloto.</p><div class="cta-actions"><a href="#entregables" class="btn btn-light">Consultar entregables</a><a href="#proyecto" class="btn btn-outline-light">Volver al proyecto</a></div></div></section>
 
     <!-- Equipo -->
     <section id="equipo" class="section bg-light py-5">
@@ -400,7 +692,7 @@
 
           <div class="team-card-col mb-3">
             <div class="card team-card h-100">
-              <img src="images/Daniela.jpg" class="card-img-top team-photo" alt="Daniela Martinez" onerror="this.onerror=null;this.src='https://placehold.co/600x600/087BEA/FFFFFF?text=Daniela';">
+              <img src="images/Daniela.png" class="card-img-top team-photo" alt="Daniela Martinez" onerror="this.onerror=null;this.src='https://placehold.co/600x600/087BEA/FFFFFF?text=Daniela';">
               <div class="card-body">
                 <h5 class="card-title">Daniela Martinez</h5>
                 <p class="small text-muted">ITD · Project Manager</p>
@@ -481,7 +773,7 @@
   <footer class="site-footer py-4 bg-dark text-white">
     <div class="container d-flex justify-content-between align-items-center">
       <div>
-        <strong>Consultora</strong> · Proyecto académico · Tecnológico de Monterrey, Campus Monterrey · 2026
+        <strong>Modus Consulting</strong> · Proyecto académico · Tecnológico de Monterrey, Campus Monterrey · 2026
       </div>
       <div class="small text-muted">Integrantes: [Agregar nombres] · Este es un proyecto académico</div>
     </div>
