@@ -1,12 +1,12 @@
 // Script JavaScript: interactividad básica para el sitio
 
 document.addEventListener('DOMContentLoaded', function(){
-  const initialHash = window.location.hash;
-  if(initialHash === '#inicio'){
+const initialHash = window.location.hash;
+  if (!initialHash || initialHash === '#inicio') {
     document.body.classList.add('home-only');
-  } else if(!initialHash){
-    document.body.classList.add('project-only');
-  }
+  } else {
+    document.body.classList.remove('home-only');
+}
 
   // Smooth scroll for internal links and reveal sections when needed
   const collapseNav = ()=>{
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
       a.classList.toggle('active', a.getAttribute('href') === targetId);
     });
   };
-  setActiveNav(initialHash === '#inicio' ? '#inicio' : initialHash === '#propuesta' ? '#propuesta' : '#proyecto');
+  setActiveNav(initialHash || '#inicio');
 
   const updateHeaderState = () => {
     if(siteHeader) siteHeader.classList.toggle('is-scrolled', window.scrollY > 18);
