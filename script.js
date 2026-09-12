@@ -167,8 +167,8 @@ const initialHash = window.location.hash;
       status: 'Completado',
       statusType: 'done',
       featured: true,
-      url: 'documents/Etapa 1_Analisis del Proceso.pdf',
-      downloadUrl: 'documents/Etapa 1_Analisis del Proceso.pdf'
+      url: 'documents/Evidencia 1 - Arquitectura empresarial y análisis del proceso.pdf',
+      downloadUrl: 'documents/Evidencia 1 - Arquitectura empresarial y análisis del proceso.pdf'
     },
     {
       id: 2,
